@@ -1,3 +1,7 @@
+package pojo;
+
+import pojo.Solit;
+
 import java.awt.Point;
 import java.util.List;
 

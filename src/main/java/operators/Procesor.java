@@ -1,3 +1,8 @@
+package operators;
+
+import pojo.MapedLines;
+import pojo.Solit;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -5,7 +10,7 @@ import java.util.List;
 public class Procesor {
 
     public MapedLines proces(List<String> parts) {
-        return  mapLines(parts);
+        return mapLines(parts);
 
 
     }
@@ -14,6 +19,7 @@ public class Procesor {
         MapedLines mapedLines = new MapedLines();
 
         int line = 0;
+
         mapedLines.setRestaurantsQuant(Integer.parseInt(pats.get(0).trim().split(" ")[0]));
         mapedLines.setRestaurantsRange(Integer.parseInt(pats.get(0).trim().split(" ")[1]));
         line++;
@@ -23,6 +29,7 @@ public class Procesor {
 
         List<Point> possibleLocations = new ArrayList<>();
         int lineVal = line;
+
         for (int i = lineVal; i < possibleLocationQuant + lineVal; i++) {
             Point point = new Point();
             point.setLocation(Integer.parseInt(pats.get(i).trim().split(" ")[0]),
@@ -36,14 +43,15 @@ public class Procesor {
 
         Integer solitQuant = Integer.parseInt(pats.get(line).trim());
         line++;
+
         List<Solit> solits = new ArrayList<>();
         lineVal = line;
+
         for (int i = lineVal; i < solitQuant + lineVal; i++) {
             Solit solit = new Solit(new Point(Integer.parseInt(pats.get(i).trim().split(" ")[0]),
                     Integer.parseInt(pats.get(i).trim().split(" ")[1])),
                     Integer.parseInt(pats.get(i).trim().split(" ")[2]));
             solits.add(solit);
-
             line++;
 
         }

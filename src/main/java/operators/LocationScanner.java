@@ -1,12 +1,16 @@
+package operators;
+
+import pojo.Solit;
+
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Scanner {
+public class LocationScanner {
 
     public int range;
 
-    public Scanner(int range) {
+    public LocationScanner(int range) {
         this.range = range;
     }
 
@@ -17,11 +21,33 @@ public class Scanner {
 
         for (Integer i : combinations
         ) {
-            //to
+            char[] temopCombinationCell = new char[locationQuant];
+
             char[] combinationCell = Integer.toBinaryString(i).toCharArray();
+
+            if(combinationCell.length<locationQuant){
+                int misingBinaryIndex =0;
+
+
+
+                for (int x = combinationCell.length; x <locationQuant ; x++) {
+                    temopCombinationCell[misingBinaryIndex] = '0';
+                    misingBinaryIndex++;
+                }
+                int filledIndex = 0;
+                for (int j = misingBinaryIndex; j <locationQuant ; j++) {
+                    temopCombinationCell[j] = combinationCell[filledIndex];
+                    filledIndex++;
+                }
+                combinationCell =temopCombinationCell;
+            }
+
+
+
+
             List<Point> requestedPoints = new ArrayList<>();
 
-            for (int j = 0; j < Integer.toBinaryString(i).toCharArray().length ; j++) {
+            for (int j = 0; j < combinationCell.length ; j++) {
 
                //tu było
 

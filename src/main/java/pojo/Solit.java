@@ -1,3 +1,5 @@
+package pojo;
+
 import java.awt.*;
 
 public class Solit {

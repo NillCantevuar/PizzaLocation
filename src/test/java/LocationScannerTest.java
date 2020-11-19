@@ -1,14 +1,15 @@
+import operators.LocationScanner;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import pojo.Solit;
 
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
 
-class ScannerTest {
+class LocationScannerTest {
 
-    Scanner scanner = new Scanner(2);
+    LocationScanner locationScanner = new LocationScanner(2);
 
     @Test
     public void shouldPerformScanningOnFirst(){
@@ -24,7 +25,7 @@ class ScannerTest {
         solitList.add(solit3);
         solitList.add(solit4);
         //when
-        int outcome =  scanner.scanLocation(point,solitList);
+        int outcome =  locationScanner.scanLocation(point,solitList);
         //then
         Assertions.assertEquals(8,outcome);
     }
@@ -45,7 +46,7 @@ class ScannerTest {
         solitList.add(solit3);
         solitList.add(solit4);
         //when
-        int outcome =  scanner.scanLocation(point,solitList);
+        int outcome =  locationScanner.scanLocation(point,solitList);
         //then
         Assertions.assertEquals(9,outcome);
     }
@@ -69,7 +70,7 @@ class ScannerTest {
         solitList.add(solit3);
         solitList.add(solit4);
         //when
-        int outcome =  scanner.scanLocationSet(pointList,solitList);
+        int outcome =  locationScanner.scanLocationSet(pointList,solitList);
         Assertions.assertEquals(17,outcome);
     }
 
@@ -92,7 +93,7 @@ class ScannerTest {
         solitList.add(solit3);
         solitList.add(solit4);
         //when
-        int outcome =  scanner.scanLocationSet(pointList,solitList);
+        int outcome =  locationScanner.scanLocationSet(pointList,solitList);
         Assertions.assertEquals(18,outcome);
     }
     @Test
@@ -114,7 +115,7 @@ class ScannerTest {
         solitList.add(solit3);
         solitList.add(solit4);
         //when
-        int outcome =  scanner.scanLocationSet(pointList,solitList);
+        int outcome =  locationScanner.scanLocationSet(pointList,solitList);
         Assertions.assertEquals(17,outcome);
     }
     @Test
@@ -146,16 +147,16 @@ class ScannerTest {
         solitList.add(solit7);
         solitList.add(solit8);
         //when
-        int outcome =  scanner.scanLocationSet(pointList,solitList);
+        int outcome =  locationScanner.scanLocationSet(pointList,solitList);
         Assertions.assertEquals(12,outcome);
     }
 
     @Test
     public void shouldGiveCombinationsFor5to2(){
         //given
-        Scanner scanner = new Scanner(2);
+        LocationScanner locationScanner = new LocationScanner(2);
         //when
-        final List<Integer> integers = scanner.selectNaturalCombinations(2, 5);
+        final List<Integer> integers = locationScanner.selectNaturalCombinations(2, 5);
         //then
         for (int i :integers
              ) {
