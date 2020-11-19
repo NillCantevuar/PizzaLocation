@@ -1,4 +1,4 @@
-# PizzaLocation jest rozwiązaniem zadania wymagającego stworzenia algorytmu wyznaczającego optymalne rozstawienie restauracji w podanych lokalizacjach,
+PizzaLocation jest rozwiązaniem zadania wymagającego stworzenia algorytmu wyznaczającego optymalne rozstawienie restauracji w podanych lokalizacjach,
 dla konkretnego rozmieszczenia klientów. Wynikiem jest maksymalna ilość klientów jaką można obsłużyć dla danych możliwości.
 Przykładowe danie:
 
