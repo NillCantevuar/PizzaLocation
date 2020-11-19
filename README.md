@@ -12,13 +12,20 @@ pizza.in
 
 4 0   
 
-7 0               -współżędne możliwych lokalizacji
-4                 -liczba lokalizacji klientów
+7 0              // -współżędne możliwych lokalizacji
+
+4                // -liczba lokalizacji klientów
+
 0 0 1 
+
 3 0 7 
+
 5 0 9 
-8 0 1            -współżędne lokalizacji klientów, wraz z ich ilością w danym miejscu
+
+8 0 1            //-współżędne lokalizacji klientów, wraz z ich ilością w danym miejscu
+ 
  
 pizza.out 
+ 
  
 18 
