@@ -4,9 +4,9 @@ Przykładowe danie:
 
 pizza.in 
  
-2 2               -liczba restauracji  -zasięg restautracji
+2 2              -liczba restauracji  -zasięg restautracji
 3                 -liczba możliwych lokalizacji
-1 0               
+1 0/               
 4 0   
 7 0               -współżędne możliwych lokalizacji
 4                 -liczba lokalizacji klientów
